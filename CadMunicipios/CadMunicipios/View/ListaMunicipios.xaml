@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadMunicipios.View.ListaMunicipios">
+    <ContentPage.Content>
+        <StackLayout Padding="6,6,6,6">
+            <ListView x:Name="lstMunicipios" ItemTapped="AoSelecionar">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="Start"  Spacing="2">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                    <Label Text="Código:" FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding Codigo}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                    <Label Text="Cidade: " FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding Nome}"></Label>
+                                    <Label Text="UF: " FontAttributes="Bold"></Label>
+                                    <Label Text="{Binding SiglaUF}"></Label>
+                                </StackLayout>
+                            </StackLayout>       
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Nova Cidade" Clicked="IncluirMunicipio" ></Button>
+            <Button Text="Buscar Cidade" Clicked="BuscarMunicipio" ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

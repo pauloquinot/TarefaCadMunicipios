@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadMunicipios.View.CadastroUF">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Sigla UF" />
+            <Entry x:Name="edtSiglaUF" ></Entry>
+            <Label Text="Nome da UF" />
+            <Entry x:Name="edtNomeUF" ></Entry>
+            <Grid>
+                <Button x:Name="btnSalvar" Text="Salvar" Grid.Row="0" Grid.Column="0" Clicked="Salvar" ></Button>
+                <Button x:Name="btnVoltar" Text="Voltar" Grid.Row="0" Grid.Column="1" Clicked="Voltar" ></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>  

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadMunicipios.View.ManutencaoMunicipios">
+    <ContentPage.Content>
+        <StackLayout Padding="6,6,6,6">
+            <Label Text="Código" />
+            <Entry x:Name="edtCodigo" Text="{Binding Codigo}" IsEnabled="False" BackgroundColor="LightGoldenrodYellow" />
+
+            <Label Text="Nome" />
+            <Entry x:Name="edtNome" Text="{Binding Nome}" BackgroundColor="AntiqueWhite"/>
+            <Grid>
+                <Label Text="UF" Grid.Row="0" Grid.Column="0"/>
+                <Picker Grid.Row="1" Grid.Column="0" BackgroundColor="AntiqueWhite"
+                    x:Name="lstUF"
+                    Title="UF"                
+                    ItemDisplayBinding="{Binding SiglaUF}">
+                </Picker>
+          
+                <Button Text="Cadastrar UF" Grid.Row="1" Grid.Column="1" Clicked="CadastrarUF"/>
+                <Button Text="Salvar" Grid.Row="3" Grid.Column="0" Clicked="IncluirMunicipio"></Button>
+                <Button Text="Voltar" Grid.Row="3" Grid.Column="1" Clicked="ListarMunicipios"></Button>
+                <Button Text="Excluir" Grid.Row="4" Grid.Column="0" Clicked="ExcluirMunicipio"></Button>
+               
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
